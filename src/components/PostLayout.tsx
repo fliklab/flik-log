@@ -17,7 +17,6 @@ import TwitterCardMeta from "./meta/TwitterCardMeta";
 
 import type { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 import type { FC } from "react";
-import { Gowun_Dodum } from "next/font/google";
 
 export interface PostLayoutProps {
   title: string;
@@ -29,7 +28,7 @@ export interface PostLayoutProps {
   source: MDXRemoteSerializeResult;
 }
 
-const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
+// const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
 
 const PostLayout: FC<PostLayoutProps> = ({
   title,
@@ -69,7 +68,7 @@ const PostLayout: FC<PostLayoutProps> = ({
         description={description}
       />
       <div
-        className={`${gowunDodum.className} block max-w-[36rem] w-full my-0 mx-auto py-0 px-6 box-border z-0 md:flex md:flex-col`}
+        className={`block max-w-[36rem] w-full my-0 mx-auto py-0 px-6 box-border z-0 md:flex md:flex-col`}
       >
         <article className="flex-[1_0_auto]">
           <header>

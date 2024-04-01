@@ -2,17 +2,15 @@ import Head from "next/head";
 import Navigation from "./Navigation";
 
 import type { FC } from "react";
-import { Gowun_Dodum } from "next/font/google";
 
 export interface LayoutProps {
   children: React.ReactNode;
 }
-const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div
-      className={`${gowunDodum.className} block px-0 py-16 box-border h-full md:flex md:flex-[1_0_auto]`}
+      className={`block px-0 py-16 box-border h-full md:flex md:flex-[1_0_auto]`}
     >
       <Head>
         <meta charSet="utf-8" />
@@ -21,9 +19,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#fff" />
       </Head>
-      <nav>
+      {/* <nav>
         <Navigation />
-      </nav>
+      </nav> */}
       <main className="flex min-h-full md:flex-[1_0_auto]">{children}</main>
     </div>
   );

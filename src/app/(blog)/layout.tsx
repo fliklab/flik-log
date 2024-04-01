@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Gowun_Dodum } from "next/font/google";
+// import { Gowun_Dodum } from "next/font/google";
 
 import type { FC, PropsWithChildren } from "react";
 
 // const inter = Ubuntu({ weight: "300", subsets: ["latin"] });
-const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
+// const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "Flik Lab",
@@ -14,7 +14,7 @@ export const metadata = {
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="ko">
-      <body className={gowunDodum.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 };
