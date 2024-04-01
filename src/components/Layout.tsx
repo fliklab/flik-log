@@ -19,9 +19,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#fff" />
       </Head>
-      {/* <nav>
+      <nav>
         <Navigation />
-      </nav> */}
+      </nav>
       <main className="flex min-h-full md:flex-[1_0_auto]">{children}</main>
     </div>
   );
