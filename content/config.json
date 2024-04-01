@@ -1,9 +1,9 @@
 {
-  "base_url": "https://next-template.staticcms.org",
-  "site_title": "Next.js Static CMS Blog",
-  "site_description": "Next.js blog template for Static CMS on Netlify",
-  "site_keywords": ["Next.js", "Static CMS", "Netlify", "React"],
+  "base_url": "https://flik-log.netlify.app",
+  "site_title": "Flik Log",
+  "site_description": "Front End Developer",
+  "site_keywords": ["Front End", "Developer", "React"],
   "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "myaccount"
+  "twitter_account": "@fliklab",
+  "github_account": "fliklab"
 }

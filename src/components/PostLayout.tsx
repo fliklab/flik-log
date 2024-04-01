@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { getAuthor } from "@/lib/authors";
 import { getTag } from "@/lib/tags";
@@ -17,6 +17,7 @@ import TwitterCardMeta from "./meta/TwitterCardMeta";
 
 import type { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 import type { FC } from "react";
+import { Gowun_Dodum } from "next/font/google";
 
 export interface PostLayoutProps {
   title: string;
@@ -28,14 +29,37 @@ export interface PostLayoutProps {
   source: MDXRemoteSerializeResult;
 }
 
-const PostLayout: FC<PostLayoutProps> = ({ title, date, slug, author, tags, description = "", source }) => {
+const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
+
+const PostLayout: FC<PostLayoutProps> = ({
+  title,
+  date,
+  slug,
+  author,
+  tags,
+  description = "",
+  source,
+}) => {
   const keywords = tags.map((it) => getTag(it)?.name).filter(Boolean);
   const authorName = getAuthor(author)?.name;
   return (
     <Layout>
-      <BasicMeta url={`/posts/${slug}`} title={title} keywords={keywords} description={description} />
-      <TwitterCardMeta url={`/posts/${slug}`} title={title} description={description} />
-      <OpenGraphMeta url={`/posts/${slug}`} title={title} description={description} />
+      <BasicMeta
+        url={`/posts/${slug}`}
+        title={title}
+        keywords={keywords}
+        description={description}
+      />
+      <TwitterCardMeta
+        url={`/posts/${slug}`}
+        title={title}
+        description={description}
+      />
+      <OpenGraphMeta
+        url={`/posts/${slug}`}
+        title={title}
+        description={description}
+      />
       <JsonLdMeta
         url={`/posts/${slug}`}
         title={title}
@@ -44,7 +68,9 @@ const PostLayout: FC<PostLayoutProps> = ({ title, date, slug, author, tags, desc
         author={authorName}
         description={description}
       />
-      <div className="block max-w-[36rem] w-full my-0 mx-auto py-0 px-6 box-border z-0 md:flex md:flex-col">
+      <div
+        className={`${gowunDodum.className} block max-w-[36rem] w-full my-0 mx-auto py-0 px-6 box-border z-0 md:flex md:flex-col`}
+      >
         <article className="flex-[1_0_auto]">
           <header>
             <h1 className="mb-2 text-4xl">{title}</h1>

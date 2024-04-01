@@ -8,7 +8,10 @@ export const metadata = {
 const AdminLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
+      <Script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        async
+      />
       <body>{children}</body>
     </html>
   );

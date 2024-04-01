@@ -2,14 +2,18 @@ import Head from "next/head";
 import Navigation from "./Navigation";
 
 import type { FC } from "react";
+import { Gowun_Dodum } from "next/font/google";
 
 export interface LayoutProps {
   children: React.ReactNode;
 }
+const gowunDodum = Gowun_Dodum({ weight: "400", subsets: ["latin"] });
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="block px-0 py-16 box-border h-full md:flex md:flex-[1_0_auto]">
+    <div
+      className={`${gowunDodum.className} block px-0 py-16 box-border h-full md:flex md:flex-[1_0_auto]`}
+    >
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
