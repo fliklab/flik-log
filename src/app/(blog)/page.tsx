@@ -16,13 +16,14 @@ const Admin: FC = () => {
         <div className="flex flex-auto items-center justify-center py-0 px-6">
           <div>
             <h1 className="text-4xl m-0 font-medium md:text-5xl">
-              Hi, I&apos;am Flik. Front-End Developer who loves every creative
-              things.<span className="text-[#15847d]">.</span>
+              <span className="text-[#15847d]">Flik</span>
             </h1>
-            <span className="inline-block mt-1 text-gray-400 tracking-wider"></span>
-            <h2 className="text-3xl font-normal md:text-4xl">
-              This website is for my life & development
-            </h2>
+            <span className="inline-block mt-1 text-gray-400 tracking-wider">
+              Front-End Developer
+            </span>
+            <div className="text-4xl font-normal md:text-2xl">
+              뭔가 만들고 생각하고 실험하는 것을 좋아합니다
+            </div>
             <SocialList />
           </div>
         </div>
