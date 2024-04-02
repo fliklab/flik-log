@@ -19,7 +19,7 @@ const Admin: FC = () => {
             <img
               src="/images/flik.jpeg"
               alt="profile"
-              className="w-28 h-28 rounded-full flex-row mx-8"
+              className="w-16 h-16 rounded-full flex-row mx-4 md:w-28 md:h-28 md:mx-8"
             />
             <div className="flex flex-col">
               <h1 className="text-4xl m-0 font-medium md:text-5xl">
